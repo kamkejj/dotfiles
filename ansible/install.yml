@@ -8,6 +8,25 @@
     Brew_packages: 
       - asciidoctor
       - zsh
+      - httpie
+      - colima
+      - ddev
+      - ddgr
+      - jq
+      - diff-so-fancy
+      - eza
+      - fzf
+      - git
+      - go
+      - lazygit
+      - zsh
+      - ripgrep
+      - neovim
+      - zoxide
+      - thefuck
+      - pipx
+      - tmux
+      - tree-sitter
     install_homebrew_if_missing: false
   pre_tasks:
       - name: Ensuring Homebrew Is Installed
@@ -36,4 +55,27 @@
       homebrew:
         name: asciidoctor
         state: present
-
+    - name: Install HTTPie
+      homebrew:
+        name: httpie
+        state: present
+    - name: Install Diff-So-fancy
+      homebrew:
+        name: diff-so-fancy
+        state: present
+    - name: Install EZA
+      homebrew:
+        name: eza
+        state: present
+    - name: Install zoxide
+      homebrew:
+        name: zoxide
+        state: present
+    - name: Install LazyGit
+      homebrew:
+        name: lazygit
+        state: present
+    - name: Install Golang
+      homebrew:
+        name: go
+        state: present
