@@ -27,6 +27,7 @@
       - pipx
       - tmux
       - tree-sitter
+      - tldr
     install_homebrew_if_missing: false
   pre_tasks:
       - name: Ensuring Homebrew Is Installed
@@ -51,13 +52,15 @@
       homebrew:
         name: zsh
         state: present
+    - name: Change shell
+      shell: chsh -s /bin/zsh
     - name: Install Asciidoctor
       homebrew:
         name: asciidoctor
         state: present
     - name: Install HTTPie
       homebrew:
-        name: httpie
+        name: homebrew/cask/httpie
         state: present
     - name: Install Diff-So-fancy
       homebrew:
@@ -78,4 +81,8 @@
     - name: Install Golang
       homebrew:
         name: go
+        state: present
+    - name: Install Golang
+      homebrew:
+        name: tldr
         state: present
